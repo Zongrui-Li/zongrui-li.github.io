@@ -1,0 +1,63 @@
+# ===== 站点信息 =====
+title: "李宗睿 · Zongrui Li"
+email: "lizr1122@mails.jlu.edu.cn"
+description: "博士研究生 · 中山大学 · 多智能体协同与强化学习"
+
+# 部署到 GitHub Pages 时填写，例如：
+#   url: "https://zongrui-li.github.io"
+#   baseurl: ""（若部署到用户名仓库则为空，若部署到项目仓库则填 "/<仓库名>"）
+url: "https://zongrui-li.github.io"
+baseurl: ""
+
+repository: "Zongrui-Li/Zongrui-Li.github.io"
+# 注：本站在 Windows 本地构建时，若设置 timezone 会触发 Jekyll 的 tzinfo 加载问题；
+# 且本站未使用时间敏感内容，故不设置 timezone。部署到 Linux 的 GitHub Pages 时如需可加回。
+# timezone: "Asia/Shanghai"
+
+# ===== 作者信息（用于侧边栏） =====
+author:
+  name: "李宗睿 / Zongrui Li"
+  avatar: "/images/profile.svg"
+  affiliation: "中山大学 · 计算机科学与技术（博士）"
+  location: "中国 · 广州"
+  email: "lizr1122@mails.jlu.edu.cn"
+  github: "Zongrui-Li"
+  bio: "博士研究生，研究方向为多智能体协同与强化学习。"
+  interests:
+    - "多智能体协同"
+    - "多智能体强化学习"
+    - "协作策略学习"
+    - "分布式决策"
+  education:
+    - "中山大学 · 计算机科学与技术（博士）2027–至今"
+    - "吉林大学 · 人工智能（本科）2023–2027"
+
+# ===== 构建设置 =====
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# 让 Jekyll 渲染 _pages 目录下的页面
+include:
+  - _pages
+
+collections:
+  publications:
+    output: true
+    permalink: /publication/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - .gitignore
+  - LICENSE

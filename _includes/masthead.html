@@ -1,0 +1,11 @@
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="masthead__title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="masthead__nav" id="siteNav">
+      {% for link in site.data.navigation.main %}
+        <a class="masthead__link{% if page.url == link.url %} is-active{% endif %}" href="{{ link.url | relative_url }}">{{ link.title }}</a>
+      {% endfor %}
+    </nav>
+    <button class="masthead__toggle" id="navToggle" aria-label="菜单">☰</button>
+  </div>
+</header>

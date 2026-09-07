@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="single">
+  {% if page.title %}<h1 class="single__title">{{ page.title }}</h1>{% endif %}
+  {% if page.authors %}<p class="single__authors">{{ page.authors }}</p>{% endif %}
+  {% if page.venue %}<p class="single__venue">{{ page.venue }}{% if page.date %} · {{ page.date | date: "%Y-%m" }}{% endif %}</p>{% endif %}
+  {% if page.paperurl %}<p><a class="btn" href="{{ page.paperurl }}" target="_blank" rel="noopener">📄 论文链接</a></p>{% endif %}
+  <div class="single__body">
+    {{ content }}
+  </div>
+</article>

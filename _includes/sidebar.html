@@ -1,0 +1,27 @@
+<aside class="sidebar">
+  <img class="sidebar__avatar" src="{{ site.author.avatar | relative_url }}" alt="头像" />
+  <h2 class="sidebar__name">{{ site.author.name }}</h2>
+  <p class="sidebar__affil">{{ site.author.affiliation }}</p>
+  <p class="sidebar__location">📍 {{ site.author.location }}</p>
+
+  <ul class="sidebar__links">
+    <li><a href="mailto:{{ site.author.email }}">📧 邮箱</a></li>
+    {% if site.author.github %}
+      <li><a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">🐙 GitHub</a></li>
+    {% endif %}
+  </ul>
+
+  {% if site.author.interests %}
+    <h3 class="sidebar__heading">研究兴趣</h3>
+    <ul class="sidebar__list">
+      {% for item in site.author.interests %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if site.author.education %}
+    <h3 class="sidebar__heading">教育经历</h3>
+    <ul class="sidebar__list">
+      {% for item in site.author.education %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  {% endif %}
+</aside>

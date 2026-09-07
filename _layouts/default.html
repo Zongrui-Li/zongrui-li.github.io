@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+{% include head.html %}
+<body>
+  {% include masthead.html %}
+  <div class="page">
+    {% include sidebar.html %}
+    <main class="page__content">
+      {{ content }}
+    </main>
+  </div>
+  {% include footer.html %}
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
