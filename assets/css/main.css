@@ -116,11 +116,11 @@ a:hover {
 }
 
 .sidebar__avatar {
-  width: 120px;
-  height: 120px;
+  width: 170px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 30%;
   border: 3px solid var(--border);
   margin-bottom: 14px;
 }
