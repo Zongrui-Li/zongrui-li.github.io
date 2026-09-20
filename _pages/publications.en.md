@@ -1,13 +1,13 @@
 ---
 layout: single
-title: "发表论文"
-permalink: /publications/
-lang: zh
+title: "Publications"
+permalink: /en/publications/
+lang: en
 ---
 
 {% assign publications = site.publications | sort: 'date' | reverse %}
 {% if publications.size == 0 %}
-<p>暂无论文。</p>
+<p>No publications yet.</p>
 {% else %}
 <ul class="publications">
   {% for pub in publications %}
@@ -16,9 +16,9 @@ lang: zh
       <p class="publication__authors">{{ pub.authors }}</p>
       <p class="publication__meta">{{ pub.venue }}{% if pub.date %} · {{ pub.date | date: "%Y-%m" }}{% endif %}</p>
       <div class="publication__links">
-        {% if pub.paperurl %}<a href="{{ pub.paperurl }}" target="_blank" rel="noopener">论文</a>{% endif %}
+        {% if pub.paperurl %}<a href="{{ pub.paperurl }}" target="_blank" rel="noopener">Paper</a>{% endif %}
         {% if pub.doi %}<a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %}
-        <a href="{{ pub.url | relative_url }}">详情</a>
+        <a href="{{ pub.url | relative_url }}">Details</a>
       </div>
     </li>
   {% endfor %}

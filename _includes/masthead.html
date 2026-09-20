@@ -4,7 +4,7 @@
     <nav class="masthead__nav" id="siteNav">
       {% for link in site.data.navigation.main %}
         {% assign url = link.url %}
-        {% if link.home == true and include.lang == 'en' %}{% assign url = '/en/' %}{% endif %}
+        {% if include.lang == 'en' and link.en_url %}{% assign url = link.en_url %}{% endif %}
         {% assign title = link.title_zh %}
         {% if include.lang == 'en' %}{% assign title = link.title_en %}{% endif %}
         <a class="masthead__link{% if page.url == url %} is-active{% endif %}" href="{{ url | relative_url }}">{{ title }}</a>

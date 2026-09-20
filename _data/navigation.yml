@@ -1,9 +1,10 @@
-# 顶部导航栏菜单（title_zh / title_en 对应中英文切换）
+# 顶部导航栏菜单（title_zh / title_en 对应中英文切换，en_url 为英文版路径）
 main:
   - title_zh: "首页"
     title_en: "Home"
     url: /
-    home: true
+    en_url: /en/
   - title_zh: "发表论文"
     title_en: "Publications"
     url: /publications/
+    en_url: /en/publications/
