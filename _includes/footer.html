@@ -1,3 +1,4 @@
+{% if include.lang == 'en' %}{% assign a = site.author.en %}{% else %}{% assign a = site.author.zh %}{% endif %}
 <footer class="footer">
-  <p>© {{ site.time | date: '%Y' }} {{ site.author.name }} · Powered by <a href="https://academicpages.github.io" target="_blank" rel="noopener">academicpages</a> &amp; Jekyll</p>
+  <p>© {{ site.time | date: '%Y' }} {{ a.name }} · Powered by <a href="https://academicpages.github.io" target="_blank" rel="noopener">academicpages</a> &amp; Jekyll</p>
 </footer>

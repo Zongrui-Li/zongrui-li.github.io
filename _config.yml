@@ -14,23 +14,39 @@ repository: "Zongrui-Li/Zongrui-Li.github.io"
 # 且本站未使用时间敏感内容，故不设置 timezone。部署到 Linux 的 GitHub Pages 时如需可加回。
 # timezone: "Asia/Shanghai"
 
-# ===== 作者信息（用于侧边栏） =====
+# ===== 作者信息（用于侧边栏，按 zh / en 双语维护） =====
 author:
-  name: "李宗睿 / Zongrui Li"
   avatar: "/images/my_image.jpg"
-  affiliation: "中山大学 · 计算机科学与技术（博士）"
-  location: "中国 · 广州"
-  email: "lizr1122@mails.jlu.edu.cn"
-  github: "Zongrui-Li"
-  bio: "博士研究生，研究方向为多智能体协同与强化学习。"
-  interests:
-    - "多智能体协同"
-    - "多智能体强化学习"
-    - "协作策略学习"
-    - "分布式决策"
-  education:
-    - "中山大学 · 计算机科学与技术（博士）2027–至今"
-    - "吉林大学 · 人工智能（本科）2023–2027"
+  zh:
+    name: "李宗睿 / Zongrui Li"
+    affiliation: "中山大学 · 计算机科学与技术（博士）"
+    location: "中国 · 广州"
+    email: "lizr1122@mails.jlu.edu.cn"
+    github: "Zongrui-Li"
+    bio: "博士研究生，研究方向为多智能体协同与强化学习。"
+    interests:
+      - "多智能体协同"
+      - "多智能体强化学习"
+      - "协作策略学习"
+      - "分布式决策"
+    education:
+      - "中山大学 · 计算机科学与技术（博士）2027–至今"
+      - "吉林大学 · 人工智能（本科）2023–2027"
+  en:
+    name: "Zongrui Li"
+    affiliation: "Sun Yat-sen University · PhD in Computer Science"
+    location: "Guangzhou, China"
+    email: "lizr1122@mails.jlu.edu.cn"
+    github: "Zongrui-Li"
+    bio: "PhD student working on multi-agent coordination and reinforcement learning."
+    interests:
+      - "Multi-Agent Coordination"
+      - "Multi-Agent Reinforcement Learning"
+      - "Cooperative Policy Learning"
+      - "Distributed Decision-Making"
+    education:
+      - "Sun Yat-sen University · PhD in Computer Science (2027–present)"
+      - "Jilin University · B.Eng. in Artificial Intelligence (2023–2027)"
 
 # ===== 构建设置 =====
 markdown: kramdown

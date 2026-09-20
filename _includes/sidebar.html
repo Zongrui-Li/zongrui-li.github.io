@@ -1,27 +1,28 @@
+{% if include.lang == 'en' %}{% assign a = site.author.en %}{% else %}{% assign a = site.author.zh %}{% endif %}
 <aside class="sidebar">
-  <img class="sidebar__avatar" src="{{ site.author.avatar | relative_url }}" alt="头像" />
-  <h2 class="sidebar__name">{{ site.author.name }}</h2>
-  <p class="sidebar__affil">{{ site.author.affiliation }}</p>
-  <p class="sidebar__location">📍 {{ site.author.location }}</p>
+  <img class="sidebar__avatar" src="{{ site.author.avatar | relative_url }}" alt="{% if include.lang == 'en' %}Avatar{% else %}头像{% endif %}" />
+  <h2 class="sidebar__name">{{ a.name }}</h2>
+  <p class="sidebar__affil">{{ a.affiliation }}</p>
+  <p class="sidebar__location">📍 {{ a.location }}</p>
 
   <ul class="sidebar__links">
-    <li><a href="mailto:{{ site.author.email }}">📧 邮箱</a></li>
-    {% if site.author.github %}
-      <li><a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">🐙 GitHub</a></li>
+    <li><a href="mailto:{{ a.email }}">📧 {% if include.lang == 'en' %}Email{% else %}邮箱{% endif %}</a></li>
+    {% if a.github %}
+      <li><a href="https://github.com/{{ a.github }}" target="_blank" rel="noopener">🐙 GitHub</a></li>
     {% endif %}
   </ul>
 
-  {% if site.author.interests %}
-    <h3 class="sidebar__heading">研究兴趣</h3>
+  {% if a.interests %}
+    <h3 class="sidebar__heading">{% if include.lang == 'en' %}Research Interests{% else %}研究兴趣{% endif %}</h3>
     <ul class="sidebar__list">
-      {% for item in site.author.interests %}<li>{{ item }}</li>{% endfor %}
+      {% for item in a.interests %}<li>{{ item }}</li>{% endfor %}
     </ul>
   {% endif %}
 
-  {% if site.author.education %}
-    <h3 class="sidebar__heading">教育经历</h3>
+  {% if a.education %}
+    <h3 class="sidebar__heading">{% if include.lang == 'en' %}Education{% else %}教育经历{% endif %}</h3>
     <ul class="sidebar__list">
-      {% for item in site.author.education %}<li>{{ item }}</li>{% endfor %}
+      {% for item in a.education %}<li>{{ item }}</li>{% endfor %}
     </ul>
   {% endif %}
 </aside>

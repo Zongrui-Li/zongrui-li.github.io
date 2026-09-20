@@ -3,8 +3,15 @@
     <a class="masthead__title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <nav class="masthead__nav" id="siteNav">
       {% for link in site.data.navigation.main %}
-        <a class="masthead__link{% if page.url == link.url %} is-active{% endif %}" href="{{ link.url | relative_url }}">{{ link.title }}</a>
+        {% assign url = link.url %}
+        {% if link.home == true and include.lang == 'en' %}{% assign url = '/en/' %}{% endif %}
+        {% assign title = link.title_zh %}
+        {% if include.lang == 'en' %}{% assign title = link.title_en %}{% endif %}
+        <a class="masthead__link{% if page.url == url %} is-active{% endif %}" href="{{ url | relative_url }}">{{ title }}</a>
       {% endfor %}
+      <a class="masthead__lang" href="{% if include.lang == 'en' %}{{ '/' | relative_url }}{% else %}{{ '/en/' | relative_url }}{% endif %}">
+        {% if include.lang == 'en' %}中文{% else %}EN{% endif %}
+      </a>
     </nav>
     <button class="masthead__toggle" id="navToggle" aria-label="菜单">☰</button>
   </div>

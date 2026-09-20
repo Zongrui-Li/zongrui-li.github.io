@@ -93,6 +93,20 @@ a:hover {
   cursor: pointer;
 }
 
+.masthead__lang {
+  border: 1px solid var(--masthead-link);
+  border-radius: 999px;
+  padding: 2px 12px;
+  font-size: 0.85rem;
+  color: var(--masthead-link);
+}
+
+.masthead__lang:hover {
+  border-color: #fff;
+  color: #fff;
+  text-decoration: none;
+}
+
 /* ===== 布局 ===== */
 .page {
   max-width: 1180px;

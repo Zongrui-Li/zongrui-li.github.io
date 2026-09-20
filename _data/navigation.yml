@@ -1,8 +1,9 @@
-# 顶部导航栏菜单
+# 顶部导航栏菜单（title_zh / title_en 对应中英文切换）
 main:
-  - title: "首页 / About"
+  - title_zh: "首页"
+    title_en: "Home"
     url: /
-  - title: "发表论文"
+    home: true
+  - title_zh: "发表论文"
+    title_en: "Publications"
     url: /publications/
-  - title: "简历 / CV"
-    url: /cv/

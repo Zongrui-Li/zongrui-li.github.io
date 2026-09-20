@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{% if page.lang == 'en' %}en{% else %}zh-CN{% endif %}">
 {% include head.html %}
 <body>
-  {% include masthead.html %}
+  {% assign lang = page.lang | default: 'zh' %}
+  {% include masthead.html lang=lang %}
   <div class="page">
-    {% include sidebar.html %}
+    {% include sidebar.html lang=lang %}
     <main class="page__content">
       {{ content }}
     </main>
   </div>
-  {% include footer.html %}
+  {% include footer.html lang=lang %}
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
